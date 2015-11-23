@@ -23,10 +23,7 @@ public class IssueService {
                                         Optional<Consumer<Void>> afterConsumer) {
         consume(beforeConsumer);
 
-        issue = repository.findOne(issue.getId());
-        if (issue == null) {
-            throw new RuntimeException("Issue is not exist");
-        }
+        issue = repository.getOne(issue.getId());
         issue.setContent(content);
 
         consume(afterConsumer);
@@ -47,10 +44,7 @@ public class IssueService {
                                        Optional<Consumer<Void>> afterConsumer) {
         consume(beforeConsumer);
 
-        Issue issue = repository.findOne(id);
-        if (issue == null) {
-            throw new RuntimeException("Issue is not exist");
-        }
+        Issue issue = repository.getOne(id);
         issue.setContent(content);
         repository.save(issue);
 

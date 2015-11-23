@@ -23,10 +23,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="spring-data-jpa-concurrency-merge-test" />
+        <module name="springdatajpa-concurrency-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="spring-data-jpa-concurrency-merge-test" target="1.8" />
+      <module name="springdatajpa-concurrency-test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
